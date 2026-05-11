@@ -37,6 +37,7 @@ import BinaryConverter from "./_sites/BinaryConverter";
 import TodoList from "./_sites/TodoList";
 import NoteTakingApp from "./_sites/NoteTakingApp";
 import HabitTracker from "./_sites/HabitTracker";
+import FlashcardMaker from "./_sites/FlashcardMaker";
 import TypingSpeedTest from "./_sites/TypingSpeedTest";
 import SnakeGame from "./_sites/SnakeGame";
 import TicTacToe from "./_sites/TicTacToe";
@@ -49,33 +50,66 @@ import LoanCalculator from "./_sites/LoanCalculator";
 import CurrencyConverterStatic from "./_sites/CurrencyConverterStatic";
 import CalorieCounter from "./_sites/CalorieCounter";
 import WaterIntakeTracker from "./_sites/WaterIntakeTracker";
-import ExpenseTracker from "./_sites/ExpenseTracker";
-import BudgetPlanner from "./_sites/BudgetPlanner";
-import DiceRoller from "./_sites/DiceRoller";
-import TarotCard from "./_sites/TarotCard";
-import NumberGuesser from "./_sites/NumberGuesser";
+import PortfolioTemplate from "./_sites/PortfolioTemplate";
+import ResumeBuilder from "./_sites/ResumeBuilder";
+import InvoiceGenerator from "./_sites/InvoiceGenerator";
+import ColorBlindnessChecker from "./_sites/ColorBlindnessChecker";
 
 // ── Batch 4 (51–65) ──────────────────────────────
-import CssAnimationPlayground from "./_sites/CssAnimationPlayground";
-import PixelRuler from "./_sites/PixelRuler";
-import AspectRatioCalculator from "./_sites/AspectRatioCalculator";
+import FontPairingTool from "./_sites/FontPairingTool";
 import BorderRadiusPreview from "./_sites/BorderRadiusPreview";
+import SvgWaveGenerator from "./_sites/SvgWaveGenerator";
 import EmojiPicker from "./_sites/EmojiPicker";
 import IconFinder from "./_sites/IconFinder";
 import RgbMixer from "./_sites/RgbMixer";
+import BudgetPlanner from "./_sites/BudgetPlanner";
+import NumberGuesser from "./_sites/NumberGuesser";
+import DiceRoller from "./_sites/DiceRoller";
+import TarotCard from "./_sites/TarotCard";
 import GratitudeJournal from "./_sites/GratitudeJournal";
+import VisionBoard from "./_sites/VisionBoard";
+import ExpenseTracker from "./_sites/ExpenseTracker";
 import KeyboardShortcutRef from "./_sites/KeyboardShortcutRef";
-import FlashcardMaker from "./_sites/FlashcardMaker";
-import SvgWaveGenerator from "./_sites/SvgWaveGenerator";
+import CssAnimationPlayground from "./_sites/CssAnimationPlayground";
+import PixelRuler from "./_sites/PixelRuler";
+import AspectRatioCalculator from "./_sites/AspectRatioCalculator";
 
-// ── Batch 5 (Dynamic 66+) ────────────────────────
+// ── Batch 5 (Dynamic 66–100) ─────────────────────
 import WeatherApp from "./_sites/WeatherApp";
 import NewsAggregator from "./_sites/NewsAggregator";
 import GithubProfileViewer from "./_sites/GithubProfileViewer";
 import CryptoTracker from "./_sites/CryptoTracker";
+import MovieSearch from "./_sites/MovieSearch";
+import RecipeFinder from "./_sites/RecipeFinder";
 import CountryExplorer from "./_sites/CountryExplorer";
 import DictionaryApp from "./_sites/DictionaryApp";
 import JokeGenerator from "./_sites/JokeGenerator";
+import DogBreedExplorer from "./_sites/DogBreedExplorer";
+import NasaApod from "./_sites/NasaApod";
+import BookSearch from "./_sites/BookSearch";
+import PokemonExplorer from "./_sites/PokemonExplorer";
+import IpLookup from "./_sites/IpLookup";
+import MemeGenerator from "./_sites/MemeGenerator";
+import TriviaGame from "./_sites/TriviaGame";
+import StockTicker from "./_sites/StockTicker";
+import ArtGallery from "./_sites/ArtGallery";
+import SpaceMissions from "./_sites/SpaceMissions";
+import LanguageTranslator from "./_sites/LanguageTranslator";
+import MusicExplorer from "./_sites/MusicExplorer";
+import CocktailFinder from "./_sites/CocktailFinder";
+import ExerciseLibrary from "./_sites/ExerciseLibrary";
+import AnimeSearch from "./_sites/AnimeSearch";
+import GithubTrending from "./_sites/GithubTrending";
+import ColorNameFinder from "./_sites/ColorNameFinder";
+import AdviceGenerator from "./_sites/AdviceGenerator";
+import CatFacts from "./_sites/CatFacts";
+import UsHolidays from "./_sites/UsHolidays";
+import ZipCodeLookup from "./_sites/ZipCodeLookup";
+import IssTracker from "./_sites/IssTracker";
+import AgeInSeconds from "./_sites/AgeInSeconds";
+import MotivationalSpeech from "./_sites/MotivationalSpeech";
+import CovidStats from "./_sites/CovidStats";
+import WikipediaSearch from "./_sites/WikipediaSearch";
 
 import ComingSoon from "./_sites/ComingSoon";
 
@@ -83,8 +117,9 @@ export function generateStaticParams() {
   return sites.map((s) => ({ slug: s.slug }));
 }
 
+// All 100 slugs → components (matches sites.js exactly)
 const SITE_MAP = {
-  // Batch 1
+  // Static 1–65
   "color-palette-generator":     ColorPaletteGenerator,
   "css-gradient-maker":          CssGradientMaker,
   "unit-converter":              UnitConverter,
@@ -95,7 +130,6 @@ const SITE_MAP = {
   "bmi-calculator":              BmiCalculator,
   "tip-calculator":              TipCalculator,
   "age-calculator":              AgeCalculator,
-  // Batch 2
   "random-quote":                RandomQuote,
   "lorem-ipsum-generator":       LoremIpsumGenerator,
   "character-counter":           CharacterCounter,
@@ -107,6 +141,8 @@ const SITE_MAP = {
   "text-case-converter":         TextCaseConverter,
   "number-to-words":             NumberToWords,
   "roman-numeral-converter":     RomanNumeralConverter,
+  "pixel-ruler":                 PixelRuler,
+  "aspect-ratio-calculator":     AspectRatioCalculator,
   "regex-tester":                RegexTester,
   "css-box-shadow-generator":    BoxShadowGenerator,
   "breathing-exercise":          BreathingExercise,
@@ -114,11 +150,10 @@ const SITE_MAP = {
   "world-clock":                 WorldClock,
   "morse-code-translator":       MorseCodeTranslator,
   "binary-converter":            BinaryConverter,
-  // Batch 3
   "todo-list":                   TodoList,
   "note-taking-app":             NoteTakingApp,
   "habit-tracker":               HabitTracker,
-  "flashcard-maker":             ComingSoon,
+  "flashcard-maker":             FlashcardMaker,
   "typing-speed-test":           TypingSpeedTest,
   "snake-game":                  SnakeGame,
   "tic-tac-toe":                 TicTacToe,
@@ -126,36 +161,66 @@ const SITE_MAP = {
   "rock-paper-scissors":         RockPaperScissors,
   "word-scramble":               WordScramble,
   "quiz-app":                    QuizApp,
-  "scientific-calculator":       ScientificCalculator,
+  "calculator":                  ScientificCalculator,
   "loan-calculator":             LoanCalculator,
-  "currency-converter":          CurrencyConverterStatic,
+  "currency-converter-static":   CurrencyConverterStatic,
   "calorie-counter":             CalorieCounter,
   "water-intake-tracker":        WaterIntakeTracker,
-  "expense-tracker":             ExpenseTracker,
-  "budget-planner":              BudgetPlanner,
-  "dice-roller":                 DiceRoller,
-  "daily-tarot-card":            TarotCard,
-  "number-guesser":              NumberGuesser,
-  // Batch 4
-  "css-animation-playground":    CssAnimationPlayground,
-  "pixel-ruler":                 PixelRuler,
-  "aspect-ratio-calculator":     AspectRatioCalculator,
+  "portfolio-template":          PortfolioTemplate,
+  "resume-builder":              ResumeBuilder,
+  "invoice-generator":           InvoiceGenerator,
+  "color-blindness-checker":     ColorBlindnessChecker,
+  "font-pairing-tool":           FontPairingTool,
   "border-radius-preview":       BorderRadiusPreview,
+  "svg-wave-generator":          SvgWaveGenerator,
   "emoji-picker":                EmojiPicker,
   "icon-finder":                 IconFinder,
   "rgb-mixer":                   RgbMixer,
+  "budget-planner":              BudgetPlanner,
+  "number-guesser":              NumberGuesser,
+  "dice-roller":                 DiceRoller,
+  "tarot-card":                  TarotCard,
   "gratitude-journal":           GratitudeJournal,
+  "motivation-board":            VisionBoard,
+  "expense-tracker":             ExpenseTracker,
   "keyboard-shortcut-ref":       KeyboardShortcutRef,
-  "flashcard-maker":             FlashcardMaker,
-  "svg-wave-generator":          SvgWaveGenerator,
-  // Batch 5 (Dynamic)
+  "css-animation-playground":    CssAnimationPlayground,
+  // Dynamic 66–100
   "weather-app":                 WeatherApp,
   "news-aggregator":             NewsAggregator,
   "github-profile-viewer":       GithubProfileViewer,
   "crypto-tracker":              CryptoTracker,
+  "movie-search":                MovieSearch,
+  "recipe-finder":               RecipeFinder,
   "country-explorer":            CountryExplorer,
   "dictionary-app":              DictionaryApp,
   "joke-generator":              JokeGenerator,
+  "dog-breed-explorer":          DogBreedExplorer,
+  "nasa-apod":                   NasaApod,
+  "open-library-search":         BookSearch,
+  "pokemon-explorer":            PokemonExplorer,
+  "ip-lookup":                   IpLookup,
+  "meme-generator":              MemeGenerator,
+  "trivia-game":                 TriviaGame,
+  "stock-ticker":                StockTicker,
+  "art-gallery":                 ArtGallery,
+  "space-missions":              SpaceMissions,
+  "language-translator":         LanguageTranslator,
+  "music-explorer":              MusicExplorer,
+  "cocktail-finder":             CocktailFinder,
+  "exercise-library":            ExerciseLibrary,
+  "anime-search":                AnimeSearch,
+  "github-trending":             GithubTrending,
+  "color-name-finder":           ColorNameFinder,
+  "advice-generator":            AdviceGenerator,
+  "cat-facts":                   CatFacts,
+  "us-holidays":                 UsHolidays,
+  "zip-code-lookup":             ZipCodeLookup,
+  "iss-tracker":                 IssTracker,
+  "age-in-seconds":              AgeInSeconds,
+  "motivational-speech":         MotivationalSpeech,
+  "covid-stats":                 CovidStats,
+  "wikipedia-search":            WikipediaSearch,
 };
 
 export default async function SitePage({ params }) {
