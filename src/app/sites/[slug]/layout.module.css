@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════
+   SITE LAYOUT — layout.module.css
+═══════════════════════════════════════════ */
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0a0a0f;
+  color: #f1f5f9;
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  transition: color 0.2s;
+  min-width: 100px;
+}
+.backBtn:hover { color: #f1f5f9; }
+
+.navCenter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navIcon { font-size: 1.4rem; }
+.navTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.navMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 100px;
+  justify-content: flex-end;
+}
+
+.typeBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+}
+.staticBadge {
+  background: rgba(99,102,241,0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99,102,241,0.25);
+}
+.dynamicBadge {
+  background: rgba(239,68,68,0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239,68,68,0.25);
+}
+.siteId {
+  font-size: 0.75rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.82rem;
+  color: #334155;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footerLink { color: #475569; transition: color 0.2s; }
+.footerLink:hover { color: #94a3b8; }
+.footerDot { color: #1e293b; }
+.footerTag {
+  color: #334155;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 480px) {
+  .navTitle { display: none; }
+  .navMeta { display: none; }
+}
